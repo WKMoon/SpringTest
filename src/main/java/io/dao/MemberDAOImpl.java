@@ -13,7 +13,8 @@ public class MemberDAOImpl implements MemberDAO{
 
     @Override
     public MemberVO login(MemberVO memberVO) {
-        System.out.println("DaoIMPL 들어옴");
+        System.out.println("DaoIMPL Enter");
+        System.out.println(memberVO.getId());
         MemberVO vo = sqlSessionTemplate.selectOne("sql.login", memberVO);
         System.out.println("voID: " + vo.getId());
         return vo;
