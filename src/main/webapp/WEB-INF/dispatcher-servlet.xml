@@ -14,8 +14,8 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
     <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://15.165.121.249:3306/centos_test_db?useSSL=false&amp;serverTimezone=UTC"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://15.165.121.249:3306/centos_test_db?verifyServerCertificate=false&amp;useSSL=false"/>
         <property name="username" value="root"/>
         <property name="password" value="1234"/>
     </bean>

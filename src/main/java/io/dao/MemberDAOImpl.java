@@ -12,12 +12,10 @@ public class MemberDAOImpl implements MemberDAO{
     private SqlSessionTemplate sqlSessionTemplate;
 
     @Override
-    public MemberVO login(MemberVO memberVO) {
-        System.out.println("DaoIMPL Enter");
-        System.out.println(memberVO.getId());
-        MemberVO vo = sqlSessionTemplate.selectOne("sql.login", memberVO);
-        System.out.println("voID: " + vo.getId());
-        return vo;
+    public boolean login(MemberVO memberVO) {
+        return (Integer) sqlSessionTemplate.selectOne("sql.login", memberVO) == 1;
+
+
 
     }
 }

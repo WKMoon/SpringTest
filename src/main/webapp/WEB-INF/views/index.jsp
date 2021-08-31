@@ -21,10 +21,12 @@
                 type: "POST",
                 data: {id:id, pw:pw},
                 success: function(data){
-                    alert("Hello " + data.id);
+                    console.log(data);
+                    alert("Hello " + data);
                 },
                 error: function(){
-                    console.log("error");
+                    alert("DDENG");
+                    // console.log(err);
                 }
             });
 
