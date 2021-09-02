@@ -3,6 +3,6 @@
 
 <mapper namespace="sql">
     <select id="login" resultType="int">
-        SELECT COUNT(*) FROM member WHERE id = #{id} AND pw = #{pw}
+        SELECT COUNT(*) FROM membertb WHERE id = #{id} AND pw = #{pw}
     </select>
 </mapper>
